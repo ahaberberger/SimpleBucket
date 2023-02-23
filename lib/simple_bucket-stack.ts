@@ -12,5 +12,9 @@ export class SimpleBucketStack extends cdk.Stack {
       publicReadAccess: false,
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
     })
+
+    new cdk.CfnOutput(this, "BucketName", {
+      value: simple_bucket.bucketName,
+    })
   }
 }
