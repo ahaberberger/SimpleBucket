@@ -16,5 +16,9 @@ export class SimpleBucketStack extends cdk.Stack {
     new cdk.CfnOutput(this, "BucketName", {
       value: simple_bucket.bucketName,
     })
+
+    new cdk.CfnOutput(this, "BucketArn", {
+      value: simple_bucket.bucketArn,
+    })
   }
 }
